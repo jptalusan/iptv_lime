@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC "-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+"http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <title>Display string in the screen</title>
+  <style>
+   <![CDATA[
+    #base{width:960px; hight:540px; left:0px; top:0px; background-color-index:4;}
+    #text1{width:300px; height:30px; left:30px; top:100px;
+           color-index:0; background-color-index:7}
+   ]]>
+  </style>
+ </head>
+ <body style="resolution:960x540;"
+  <div id="base">
+   <p id="text1">This is test</p>
+  </div>
+ </body>
+</bml>

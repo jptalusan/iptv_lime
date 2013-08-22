@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC "-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+ "http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <title>Replace A with B</title>
+  <style>
+   <![CDATA[
+    #base {width:960px; height:540px; left:0px; top:0px;
+    background-color-index:4;}
+    #text1{nav-index:0; width:320px; height:60px; left:30px; top:100px;
+    color-index:0; background-color-index:7;}
+   ]]>
+  </style>
+  <script>
+   <![CDATA[
+    function changeText(){
+     document.getElementById("text1").firstChild.data="It has just been replaced.";
+    }
+   ]]> 
+  </script>
+ </head>
+ <body style="resolution:960x540;">
+  <div id="base">
+   <p id="text1" onkeydown="changeText();">
+    <![CDATA[This is test. Click the Enter button.]]>
+   </p>
+  </div>
+ </body>
+</bml>

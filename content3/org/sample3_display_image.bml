@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC"-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+"http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <title>Display image file</title>
+  <style>
+   <![CDATA[
+    .base{background-color-index: 4;}
+    #mat1{width:960; height:540px; left:0px; top:0px; visibility:visible;}
+    #kabe1{width:960px; height:100px; left:0px; top:0px;}
+    #kabe2{width:200px; height:120px; left:0px; top:100px;}
+    #kabe3{width:600px; height:120px; left:360px; top:100px;}
+    #kabe4{width:960px; height:320px; left:0px; top:220px;}
+    #photo1{width:160px; height:120px; left:200px; top:100px;}
+   ]]>
+  </style>
+ </head>
+ <body style="resolution:960x540;">
+  <div id="mat1">
+   <object id="photo1" type="image/jpeg" data="images/Sunset.JPG"></object>
+   <div id="kabe1" class="base"></div>
+   <div id="kabe2" class="base"></div>
+   <div id="kabe3" class="base"></div>
+   <div id="kabe4" class="base"></div>
+  </div>
+ </body>
+</bml>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC"-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+"http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <title>Replacement</title>
+  <style>
+   <![CDATA[
+    .base{background-color-index: 4;}
+    #base {width:960px; height:540px; left:0px; top:0px;background-color-index:4;}
+    #text1 {width:300px;height:30px; left:230px; top:230px; color-index:3;}
+    #jump1 {nav-index:0; color-index:0; background-color-index:7;}
+   ]]>
+  </style>
+ </head>
+ <body style="resolution:960x540;">
+  <div id="base">
+   <p id="text1"><a id="jump1" href="slideshow.bml">This is test.</a></p>
+  </div>
+ </body>
+</bml>

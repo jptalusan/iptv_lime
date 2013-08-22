@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE bml PUBLIC
+  "-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+  "http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0" ?>
+<bml>
+<head>
+<title></title>
+<style><![CDATA[
+    body {
+        background-color-index:0;
+        resolution:960x540;
+        display-aspect-ratio:16v9;
+    }
+
+    p.pfInfo {
+        font-size:10px;
+        padding-top:3px;
+        padding-left:10px;
+        color-index:7;
+        grayscale-color-index:7 15;
+        font-weight:bold;
+    }
+
+     p.pfInfoList {
+        background-color-index:79;
+    }
+
+     p.pfInfoListBackground {
+        background-color-index:91;
+    }
+
+     p.pfInfoListFocus {
+        background-color-index:71;
+    }
+]]>
+</style>
+<script><![CDATA[
+
+//===========================================================================
+// Play control file URL
+//===========================================================================
+
+var metaFile1="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/world_out.mp4";
+
+var metaFile2="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/earth_out.mp4";
+
+var metaFile3="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/japan_out.mp4";
+
+var metaFile4="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/penguin_out.mp4";
+
+var metaFile5="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/monkey_out.mp4";
+
+var metaFile6="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/whitebear_out.mp4";
+
+var metaFile7="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/a_1080i_electra8000.mp4";
+
+var metaFile8="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/a_1080p_progressive.mp4";
+
+var metaFile9="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/b_720p.mp4";
+
+var metaFile10="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/moviebox/h264-hd-tts/AeratorOUT.mpg";
+
+var metaFileLive="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/monitoring/live-tts.mp4&liveflg=1";
+
+var metaFileStoreLive="http://vod2.iptvf.jp/pcs/resolvecontent?&contents_path=/monitoring/live-tts.mp4&liveflg=1&vodflg=1";
+
+//==============================================================================
+
+function kc() {
+    var id = document.currentEvent.target.id;
+
+    if (id=="10") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile1, "startup.bml", 0, "AAA");
+    }
+
+    if (id=="11") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile2, "startup.bml", 0, "AAA");
+    }
+
+    if (id=="12") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile3, "startup.bml", 0, "AAA");
+    }
+
+    if (id=="13") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile4, "startup.bml", 0, "AAA");
+    }
+
+    if (id=="14") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile5, "startup.bml", 0, "AAA");
+    }
+    if (id=="15") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile6, "startup.bml", 0, "AAA");
+    }
+    if (id=="16") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile7, "startup.bml", 0, "AAA");
+    }
+    if (id=="17") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile8, "startup.bml", 0, "AAA");
+    }
+    if (id=="18") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile9, "startup.bml", 0, "AAA");
+    }
+    if (id=="19") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFile10, "startup.bml", 0, "AAA");
+    }
+    if (id=="20") {
+        browser.playRomSound("romsound://7");
+        browser.launchDocument("startup.bml");
+    }
+    if (id=="21") {
+        browser.playRomSound("romsound://7");
+        browser.launchDocument("startup.bml");
+    }
+    if (id=="22") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFileStoreLive, "startup.bml", 0, "AAA");
+    }
+    if (id=="23") {
+        browser.playRomSound("romsound://7");
+        browser.launchIPTVContent(metaFileLive, "startup.bml", 0, "AAA");
+    }
+    if (id=="24") {
+        browser.playRomSound("romsound://7");
+        browser.launchDocument("http://vod2.iptvf.jp/bml/startup.bml");
+    }
+}
+
+function kd() {
+    var code = String(document.currentEvent.keyCode);
+    var id = document.currentEvent.target.id;
+
+    if(code=="1" || code=="2") {
+        browser.playRomSound("romsound://9");
+    }
+
+    browser.lockScreen();
+    if(code=="1") {
+        if (id=="10") {
+            document.getElementById("10focus").normalStyle.visibility="hidden";
+            document.getElementById("24focus").normalStyle.visibility="visible";
+            document.getElementById("24").focus();
+        }
+        if (id=="11") {
+            document.getElementById("11focus").normalStyle.visibility="hidden";
+            document.getElementById("10focus").normalStyle.visibility="visible";
+            document.getElementById("10").focus();
+        }
+        if (id=="12") {
+            document.getElementById("12focus").normalStyle.visibility="hidden";
+            document.getElementById("11focus").normalStyle.visibility="visible";
+            document.getElementById("11").focus();
+        }
+        if (id=="13") {
+            document.getElementById("13focus").normalStyle.visibility="hidden";
+            document.getElementById("12focus").normalStyle.visibility="visible";
+            document.getElementById("12").focus();
+        }
+        if (id=="14") {
+            document.getElementById("14focus").normalStyle.visibility="hidden";
+            document.getElementById("13focus").normalStyle.visibility="visible";
+            document.getElementById("13").focus();
+        }
+        if (id=="15") {
+            document.getElementById("15focus").normalStyle.visibility="hidden";
+            document.getElementById("14focus").normalStyle.visibility="visible";
+            document.getElementById("14").focus();
+        }
+        if (id=="16") {
+            document.getElementById("16focus").normalStyle.visibility="hidden";
+            document.getElementById("15focus").normalStyle.visibility="visible";
+            document.getElementById("15").focus();
+        }
+        if (id=="17") {
+            document.getElementById("17focus").normalStyle.visibility="hidden";
+            document.getElementById("16focus").normalStyle.visibility="visible";
+            document.getElementById("16").focus();
+        }
+        if (id=="18") {
+            document.getElementById("18focus").normalStyle.visibility="hidden";
+            document.getElementById("17focus").normalStyle.visibility="visible";
+            document.getElementById("17").focus();
+        }
+        if (id=="19") {
+            document.getElementById("19focus").normalStyle.visibility="hidden";
+            document.getElementById("18focus").normalStyle.visibility="visible";
+            document.getElementById("18").focus();
+        }
+        if (id=="20") {
+            document.getElementById("20focus").normalStyle.visibility="hidden";
+            document.getElementById("19focus").normalStyle.visibility="visible";
+            document.getElementById("19").focus();
+        }
+        if (id=="21") {
+            document.getElementById("21focus").normalStyle.visibility="hidden";
+            document.getElementById("20focus").normalStyle.visibility="visible";
+            document.getElementById("20").focus();
+        }
+        if (id=="22") {
+            document.getElementById("22focus").normalStyle.visibility="hidden";
+            document.getElementById("21focus").normalStyle.visibility="visible";
+            document.getElementById("21").focus();
+        }
+        if (id=="23") {
+            document.getElementById("23focus").normalStyle.visibility="hidden";
+            document.getElementById("22focus").normalStyle.visibility="visible";
+            document.getElementById("22").focus();
+        }
+        if (id=="24") {
+            document.getElementById("24focus").normalStyle.visibility="hidden";
+            document.getElementById("23focus").normalStyle.visibility="visible";
+            document.getElementById("23").focus();
+        }
+    }
+
+    if(code=="2") {
+        if (id=="10") {
+            if (document.getElementById("name11").firstChild.data==" ") {
+                document.getElementById("10").focus();
+
+            } else {
+                document.getElementById("10focus").normalStyle.visibility="hidden";
+                document.getElementById("11focus").normalStyle.visibility="visible";
+                document.getElementById("11").focus();
+            }
+        }
+        if (id=="11") {
+            if (document.getElementById("name12").firstChild.data==" ") {
+                document.getElementById("11").focus();
+
+            } else {
+                document.getElementById("11focus").normalStyle.visibility="hidden";
+                document.getElementById("12focus").normalStyle.visibility="visible";
+                document.getElementById("12").focus();
+            }
+        }
+        if (id=="12") {
+            if (document.getElementById("name13").firstChild.data==" ") {
+                document.getElementById("12").focus();
+
+            } else {
+                document.getElementById("12focus").normalStyle.visibility="hidden";
+                document.getElementById("13focus").normalStyle.visibility="visible";
+                document.getElementById("13").focus();
+            }
+        }
+        if (id=="13") {
+            if (document.getElementById("name14").firstChild.data==" ") {
+                document.getElementById("13").focus();
+
+            } else {
+                document.getElementById("13focus").normalStyle.visibility="hidden";
+                document.getElementById("14focus").normalStyle.visibility="visible";
+                document.getElementById("14").focus();
+            }
+        }
+        if (id=="14") {
+            if (document.getElementById("name15").firstChild.data==" ") {
+                document.getElementById("14").focus();
+
+            } else {
+                document.getElementById("14focus").normalStyle.visibility="hidden";
+                document.getElementById("15focus").normalStyle.visibility="visible";
+                document.getElementById("15").focus();
+            }
+        }
+        if (id=="15") {
+            if (document.getElementById("name16").firstChild.data==" ") {
+                document.getElementById("15").focus();
+
+            } else {
+                document.getElementById("15focus").normalStyle.visibility="hidden";
+                document.getElementById("16focus").normalStyle.visibility="visible";
+                document.getElementById("16").focus();
+            }
+        }
+        if (id=="16") {
+            if (document.getElementById("name17").firstChild.data==" ") {
+                document.getElementById("16").focus();
+
+            } else {
+                document.getElementById("16focus").normalStyle.visibility="hidden";
+                document.getElementById("17focus").normalStyle.visibility="visible";
+                document.getElementById("17").focus();
+            }
+        }
+        if (id=="17") {
+            if (document.getElementById("name18").firstChild.data==" ") {
+                document.getElementById("17").focus();
+
+            } else {
+                document.getElementById("17focus").normalStyle.visibility="hidden";
+                document.getElementById("18focus").normalStyle.visibility="visible";
+                document.getElementById("18").focus();
+            }
+        }
+        if (id=="18") {
+            if (document.getElementById("name19").firstChild.data==" ") {
+                document.getElementById("18").focus();
+
+            } else {
+                document.getElementById("18focus").normalStyle.visibility="hidden";
+                document.getElementById("19focus").normalStyle.visibility="visible";
+                document.getElementById("19").focus();
+            }
+        }
+        if (id=="19") {
+            if (document.getElementById("name20").firstChild.data==" ") {
+                document.getElementById("19").focus();
+
+            } else {
+                document.getElementById("19focus").normalStyle.visibility="hidden";
+                document.getElementById("20focus").normalStyle.visibility="visible";
+                document.getElementById("20").focus();
+            }
+        }
+        if (id=="20") {
+            if (document.getElementById("name21").firstChild.data==" ") {
+                document.getElementById("20").focus();
+
+            } else {
+                document.getElementById("20focus").normalStyle.visibility="hidden";
+                document.getElementById("21focus").normalStyle.visibility="visible";
+                document.getElementById("21").focus();
+            }
+        }
+        if (id=="21") {
+            if (document.getElementById("name22").firstChild.data==" ") {
+                document.getElementById("21").focus();
+
+            } else {
+                document.getElementById("21focus").normalStyle.visibility="hidden";
+                document.getElementById("22focus").normalStyle.visibility="visible";
+                document.getElementById("22").focus();
+            }
+        }
+        if (id=="22") {
+            if (document.getElementById("name23").firstChild.data==" ") {
+                document.getElementById("22").focus();
+
+            } else {
+                document.getElementById("22focus").normalStyle.visibility="hidden";
+                document.getElementById("23focus").normalStyle.visibility="visible";
+                document.getElementById("23").focus();
+            }
+        }
+        if (id=="23") {
+            if (document.getElementById("name24").firstChild.data==" ") {
+                document.getElementById("23").focus();
+
+            } else {
+                document.getElementById("23focus").normalStyle.visibility="hidden";
+                document.getElementById("24focus").normalStyle.visibility="visible";
+                document.getElementById("24").focus();
+            }
+        }
+        if (id=="24") {
+            if (document.getElementById("name10").firstChild.data==" ") {
+                document.getElementById("24").focus();
+
+            } else {
+                document.getElementById("24focus").normalStyle.visibility="hidden";
+                document.getElementById("10focus").normalStyle.visibility="visible";
+                document.getElementById("10").focus();
+            }
+        }
+    }
+    browser.unlockScreen();
+}
+
+function onload() {
+    document.getElementById("10").focus();
+    document.getElementById("10focus").normalStyle.visibility="visible";
+}
+
+]]></script>
+</head>
+<body id="body" onload="onload();">
+
+<div style="left:268px; top:48; width:424px; height:469px;">
+    <p class="pfInfoListBackground" style="left:0px;top:0px;width:424px;height:388px;"></p>
+</div>
+
+<div style="left:270px; top:50; width:740px; height:432px;">
+    <p class="pfInfo" style="left:45px;top:0px;width:420px;height:25px;">IPTV VOD Test Contents List</p>
+</div>
+
+<div style="left:270px; top:486px; width:740px; height:27px;">
+    <p class="pfInfo" style="left:8px;top:0px;width:420px;height:25px;">Select the test item with Up/Down Key</p>
+</div>
+
+<div style="left:270px; top:80px; width:740px; height:405px;">
+    <p id="10" class="pfInfoList" style="left:0px;top:0px;  width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="11" class="pfInfoList" style="left:0px;top:27px; width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="12" class="pfInfoList" style="left:0px;top:54px; width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="13" class="pfInfoList" style="left:0px;top:81px; width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="14" class="pfInfoList" style="left:0px;top:108px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="15" class="pfInfoList" style="left:0px;top:135px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="16" class="pfInfoList" style="left:0px;top:162px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="17" class="pfInfoList" style="left:0px;top:189px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="18" class="pfInfoList" style="left:0px;top:216px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="19" class="pfInfoList" style="left:0px;top:243px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="20" class="pfInfoList" style="left:0px;top:270px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="21" class="pfInfoList" style="left:0px;top:297px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="22" class="pfInfoList" style="left:0px;top:324px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="23" class="pfInfoList" style="left:0px;top:351px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+    <p id="24" class="pfInfoList" style="left:0px;top:378px;width:420px;height:25px;" onclick="kc();" onkeydown="kd();"></p>
+
+    <p id="10focus" class="pfInfoListFocus" style="left:0px;top:0px;  width:420px;height:25px;visibility:hidden;"></p>
+    <p id="11focus" class="pfInfoListFocus" style="left:0px;top:27px; width:420px;height:25px;visibility:hidden;"></p>
+    <p id="12focus" class="pfInfoListFocus" style="left:0px;top:54px; width:420px;height:25px;visibility:hidden;"></p>
+    <p id="13focus" class="pfInfoListFocus" style="left:0px;top:81px; width:420px;height:25px;visibility:hidden;"></p>
+    <p id="14focus" class="pfInfoListFocus" style="left:0px;top:108px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="15focus" class="pfInfoListFocus" style="left:0px;top:135px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="16focus" class="pfInfoListFocus" style="left:0px;top:162px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="17focus" class="pfInfoListFocus" style="left:0px;top:189px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="18focus" class="pfInfoListFocus" style="left:0px;top:216px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="19focus" class="pfInfoListFocus" style="left:0px;top:243px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="20focus" class="pfInfoListFocus" style="left:0px;top:270px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="21focus" class="pfInfoListFocus" style="left:0px;top:297px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="22focus" class="pfInfoListFocus" style="left:0px;top:324px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="23focus" class="pfInfoListFocus" style="left:0px;top:351px;width:420px;height:25px;visibility:hidden;"></p>
+    <p id="24focus" class="pfInfoListFocus" style="left:0px;top:378px;width:420px;height:25px;visibility:hidden;"></p>
+
+    <p id="name10" class="pfInfo" style="left:0px;top:0px;  width:420px;height:25px;">01　 World HD H.264/MPEG2-AAC-LC</p>
+    <p id="name11" class="pfInfo" style="left:0px;top:27px; width:420px;height:25px;">02　 Earth HD H.264/MPEG2-AAC-LC</p>
+    <p id="name12" class="pfInfo" style="left:0px;top:54px; width:420px;height:25px;">03　 Japan HD H.264/MPEG2-AAC-LC</p>
+    <p id="name13" class="pfInfo" style="left:0px;top:81px; width:420px;height:25px;">04　 Penguin HD H.264/MPEG2-AAC-LC</p>
+    <p id="name14" class="pfInfo" style="left:0px;top:108px;width:420px;height:25px;">05　 Monkey  HD H.264/MPEG2-AAC-LC</p>
+    <p id="name15" class="pfInfo" style="left:0px;top:135px;width:420px;height:25px;">06　 White Bear HD H.264/MPEG2-AAC-LC</p>
+    <p id="name16" class="pfInfo" style="left:0px;top:162px;width:420px;height:25px;">07　 Harmonic 1080i</p>
+    <p id="name17" class="pfInfo" style="left:0px;top:189px;width:420px;height:25px;">08　 Harmonic 1080p</p>
+    <p id="name18" class="pfInfo" style="left:0px;top:216px;width:420px;height:25px;">09　 Harmonic 720p</p>
+    <p id="name19" class="pfInfo" style="left:0px;top:243px;width:420px;height:25px;">10　 Aerator Video</p>
+    <p id="name20" class="pfInfo" style="left:0px;top:270px;width:420px;height:25px;">11　 ---------------------</p>
+    <p id="name21" class="pfInfo" style="left:0px;top:297px;width:420px;height:25px;">12　 ---------------------</p>
+    <p id="name22" class="pfInfo" style="left:0px;top:324px;width:420px;height:25px;">13　 Live & Store</p>
+    <p id="name23" class="pfInfo" style="left:0px;top:351px;width:420px;height:25px;">14　 Live !!</p>
+    <p id="name24" class="pfInfo" style="left:0px;top:378px;width:420px;height:25px;">15　 Rerurn to root menu</p>
+</div>
+
+</body>
+</bml>

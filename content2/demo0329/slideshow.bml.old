@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC "-//ARIB STD-B24:1999//DTD BML Document for IPTV//JA"
+ "http://www.arib.or.jp/B24/DTD/bml_x_x_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+<head>
+<title>Slideshow</title>
+<style><![CDATA[
+ body {
+  resolution:960x540;
+  display-aspect-ratio:16v9;
+       }
+       p {background-color-index:2;}
+       .button {top:510px;height:24px;width:85px;text-align:center; border-style:solid;border-width:2px;}
+]]></style>
+
+<script><![CDATA[
+var timer
+var position;
+var preLoad;
+
+function onload() {
+ position=0;
+     preLoad = new Array(24);
+
+for (var i=0; i<24; i++) {
+     preLoad[i]="images/slide"+i+".JPG";
+}
+startShow();
+}
+
+function startShow() {
+     timer = setTimeout("forward()", 10000);
+}
+
+function restartShow() {
+     browser.clearTimer(timer);
+     startShow();
+}
+
+function forward() {
+     if (position < 23) {
+       position ++;
+     }else {
+       position = 0;
+     }
+
+     $("img").data = preLoad[position];
+     timer = setTimeout("forward()", 10000);
+ }
+
+function onunload() {
+     browser.clearTimer(timer);
+}
+
+function $(id) {
+     return document.getElementById(id);
+}
+
+function setTimeout(code,delay) {
+     return browser.setInterval(code,delay,1);
+}
+
+]]></script>
+</head>
+
+<body onload="onload();">
+
+<!--
+<div id="imageBox" style="top:10px;left:150px;width:640px;height:480px;">
+<object id="img" style="top:0px;left:0px;width:640px;height:480px" data="images/slide0.JPG" type="image/jpeg"/></div>
+-->
+<div id="imageBox" style="top:75px;left:250px;width:640px;height:480px;">
+<object id="img" style="top:0px;left:0px;width:640px;height:480px" data="../images/slide0.JPG" type="image/jpeg"/></div>
+
+<!--
+<p id="blue" class="button" style="left:10px; background-color-index:4;" onclick="StartShow(); "accesskey="B">Start</p>
+<p id="red" class="button" style="left:110px;background-color-index:1;" onlick="onunload(); "accesskey="R">Stop</p>
+<p id="green" class="button" style="left:210px;background-color-index:2;" onlick="RestartShow();" accesskey="G">Restart</p>
+-->
+<!--
+<p id="blue" class="button" style="left:300px; background-color-index:4;" onclick="StartShow(); "accesskey="B">Start</p>
+<p id="red" class="button" style="left:420px;background-color-index:1;" onlick="onunload(); "accesskey="R">Stop</p>
+<p id="green" class="button" style="left:540px;background-color-index:2;" onlick="RestartShow();" accesskey="G">Restart</p>
+-->
+</body>
+</bml>

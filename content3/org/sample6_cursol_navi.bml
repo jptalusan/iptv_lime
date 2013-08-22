@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC "-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+ "http://www.iptvfroum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <style>
+   <![CDATA[
+    #base {width:960px; height:540px; left:0px; top:0px;
+     background-color-index:4;}
+    #text0 {left:200px; top:200px; width:95px; height:50px; nav-index:0; nav-up:1; nav-right:2; nav-down:3; nav-left:4;}
+    #text1 {left:200px; top:100px; width:95px; height:50px; nav-index:1; nav-up:1; nav-right:2; nav-down:0; nav-left:4;}
+    #text2 {left:300px; top:200px; width:95px; height:50px; nav-index:2; nav-up:1; nav-right:2; nav-down:3; nav-left:0;}
+    #text3 {left:200px; top:300px; width:95px; height:50px; nav-index:3; nav-up:0; nav-right:2; nav-down:3; nav-left:4;}
+    #text4 {left:100px; top:200px; width:95px; height:50px; nav-index:4; nav-up:1; nav-right:0; nav-down:3; nav-left:4;}
+    p {background-color-index:2;text-align:center;}
+    p:focus {background-color-index:3;}
+  ]]></style>
+ </head>
+ <body style="resolution:960x540;">
+  <div id="base">
+   <p id="text0">Lime</p>
+   <p id="text1">Apple</p>
+   <p id="text2">Banana</p>
+   <p id="text3">Orange</p>
+   <p id="text4">Lemon</p>
+  </div>
+ </body>
+</bml>

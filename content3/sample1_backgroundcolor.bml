@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE bml PUBLIC "-//IPTVF CDN:2008//DTD BML Document for IPTV//JA"
+"http://www.iptvforum.jp/CDN/DTD/bml_100_0_iptv.dtd">
+<?bml bml-version="100.0"?>
+<bml>
+ <head>
+  <title>Setting background color</title>
+  <style>
+   <![CDATA[
+    #base{width:960px; height:540px; left:0px; top:0px; background-color-index:4;}
+   ]]>
+  </style>
+ </head>
+ <body style="resolution:960x540;">
+  <div id="base"></div>
+ </body>
+</bml>
